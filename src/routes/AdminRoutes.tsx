@@ -3,6 +3,8 @@ import Dashboard from "../pages/Dashboard/Dashboard";
 import AddNewSentencePatterns from "../pages/AddNewSentencePatterns/AddNewSentencePatterns";
 import AddNewWord from "../pages/AddNewWord/AddNewWord";
 import WordList from "../pages/WordList/WordList";
+import WordUpdate from "../pages/WordUpdate/WordUpdate";
+
 
 const AdminRoutes = () => {
   return (
@@ -13,6 +15,7 @@ const AdminRoutes = () => {
         <Route path="/addnewsentencepattern" element={<AddNewSentencePatterns />} />
         <Route path="/addnewword" element={<AddNewWord />} />
         <Route path="/wordlist" element={<WordList />} />
+        <Route path="/wordUpdate" element={<WordUpdate />} />
       </Routes>
     </div>
   );

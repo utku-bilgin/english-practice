@@ -131,10 +131,10 @@ export const DictionaryProvider = ({ children }: DictionaryProviderProps) => {
       )
     ) {
       const lastWord: DictionaryItem  = words.splice(-1)[0];
-      const Id: number = parseInt(lastWord.id.toString());
+      const Id: number = parseInt(lastWord.id.toString()) + 1;
 
       const newData = {
-        id: Id + 1,
+        id: Id,
         ing: data.ing,
         tr1: data.tr1,
         tr2: data.tr2,
@@ -175,15 +175,23 @@ export const DictionaryProvider = ({ children }: DictionaryProviderProps) => {
 
     await axios.put(`http://localhost:3002/words/${data.id}`, updatedWord);
 
-    const updatedWords = [...words];
-    updatedWords[dataIndex] = updatedWord;
+    setWords(prevWords => {
+      const updatedWords = [...prevWords];
+      updatedWords[dataIndex] = updatedWord;
+      return updatedWords;
+    });
   }
 
   const DeleteWord = async (data: number) => {
     const dataIndex = words.findIndex(word => word.id === data);
-    if(dataIndex === -1)return
 
-    await axios.delete(`http://localhost:3002/words/${data}`);
+    console.log(data)
+    console.log(dataIndex)
+    // if(dataIndex === -1)return
+
+    const fetch = await axios.delete(`http://localhost:3002/words/${data}`);
+
+    console.log(fetch)
 
     const deleteWord = [...words];
     deleteWord.splice(dataIndex, 1)
