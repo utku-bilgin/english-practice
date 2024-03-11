@@ -1,0 +1,26 @@
+.container {
+  width: 400px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+
+
+  .formBtn{
+    width: 200px;
+    height: 40px;
+    background-color: aqua;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--color-c2);
+    border: 1px solid var(--color-c2);
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .active{
+    background-color: var(--color-c2);
+    color: var(--color-a);
+  }
+}

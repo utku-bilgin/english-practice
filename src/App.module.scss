@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Mulish", sans-serif;
+}
+
+:root {
+    --color-a: #222831;
+    --color-b: #393E46;
+    --color-c: #EBF400;
+    --color-d: #EEEEEE;
+    --color-c2: #00FFCA;
+    --color-betslip-bg: #EEEEEE;
+    --color-betslip-text: #222831;
+  }

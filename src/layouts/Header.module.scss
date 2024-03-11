@@ -1,0 +1,35 @@
+.container {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(0, 255, 202);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 255, 202, 1) 10%,
+    rgba(34, 40, 49, 1) 90%
+  );
+
+  .logo {
+    height: 10vh;
+    cursor: pointer;
+  }
+
+  .adminLogin{
+    width: 40px;
+    height: 40px;
+    color: var(--color-c2);
+    border: 1px solid var(--color-c2);
+    background-color: transparent;
+    margin-right: 40px;
+    padding: 4px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  .adminLogin:hover{
+    color: var(--color-a);
+    background-color: var(--color-c2);
+  }
+}

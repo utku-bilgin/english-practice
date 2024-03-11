@@ -1,0 +1,113 @@
+.container {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--color-a);
+  color: var(--color-d);
+
+  .header{
+    font-size: 60px;
+    color: var(--color-c2);
+    position: absolute;
+    top: 10vh;
+  }
+
+  .vocabularyCard {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    .vocabularyCardItem {
+      font-size: 140px;
+    }
+
+    .vocabularyCardInput {
+      width: 600px;
+      font-size: 100px;
+      caret-color: var(--color-c2);
+      color: var(--color-c2);
+      background-color: transparent;
+      border-bottom: 1px solid var(--color-c2);
+      text-align: center;
+      transition: color 0.6s;
+    }
+
+    .vocabularyCardButtonArea {
+      width: 400px;
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .vocabularyCardButton {
+        width: 180px;
+        height: 80px;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid var(--color-c2);
+        color: var(--color-c2);
+        background-color: transparent;
+        border-radius: 4px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .vocabularyCardButton:hover {
+        font-weight: bold;
+        color: var(--color-a);
+        background-color: var(--color-c2);
+      }
+    }
+
+    .false {
+      color: red;
+    }
+
+    // .true {
+    //   color: green;
+    // }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+   
+  
+    .vocabularyCard {
+    
+  
+      .vocabularyCardItem {
+        font-size: 70px;
+      }
+  
+      .vocabularyCardInput {
+        width: 400px;
+      font-size: 30px;
+      margin-top: 100px;
+      }
+
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .container {
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+}
