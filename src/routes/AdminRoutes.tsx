@@ -4,6 +4,8 @@ import AddNewSentencePatterns from "../pages/AddNewSentencePatterns/AddNewSenten
 import AddNewWord from "../pages/AddNewWord/AddNewWord";
 import WordList from "../pages/WordList/WordList";
 import WordUpdate from "../pages/WordUpdate/WordUpdate";
+import SentencePatternList from "../pages/SentencePatternList/SentencePatternList";
+import SentencePatternUpdate from "../pages/SentencePatternUpdate/SentencePatternUpdate";
 
 
 const AdminRoutes = () => {
@@ -15,7 +17,9 @@ const AdminRoutes = () => {
         <Route path="/addnewsentencepattern" element={<AddNewSentencePatterns />} />
         <Route path="/addnewword" element={<AddNewWord />} />
         <Route path="/wordlist" element={<WordList />} />
-        <Route path="/wordUpdate" element={<WordUpdate />} />
+        <Route path="/sentencepatternlist" element={<SentencePatternList />} />
+        <Route path="/wordupdate" element={<WordUpdate />} />
+        <Route path="/sentenceupdate" element={<SentencePatternUpdate />} />
       </Routes>
     </div>
   );

@@ -13,7 +13,7 @@ interface SentencePatternsItem {
 
 const SentencePatterns = () => {
   const sentencespattern = useSentencePatternsContext();
-  const SentencePatterns = sentencespattern.SentencePatterns;
+  const {SentencePatterns} = sentencespattern;
   const [sentences, setSentences] = useState<SentencePatternsItem>({
     id: 0,
     ing: "",

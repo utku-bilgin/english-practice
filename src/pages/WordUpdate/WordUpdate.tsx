@@ -117,7 +117,7 @@ const WordUpdate = ( ) => {
           </div>
         </div>
         <button className={style.formButton} type="submit">
-          Ekle
+          Update
         </button>
       </form>
     </div>

@@ -1,0 +1,105 @@
+.container {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--color-a);
+  color: var(--color-d);
+
+  .header {
+    font-size: 60px;
+    color: var(--color-c2);
+    position: static;
+    top: 10vh;
+    text-align: center;
+  }
+
+  .virtuoso {
+    width: 800px;
+    overflow: hidden;
+    scrollbar-width: none;
+  }
+
+  .sentenceCard {
+    width: 800px;
+    min-height: 80px;
+    margin-top: 6px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 24px;
+    border-bottom: 1px solid var(--color-c2);
+    position: relative;
+
+    .sentenceCardItem {
+    color: var(--color-c2);
+    }
+
+    .management {
+      min-height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      position: absolute;
+      right: 4px;
+
+      .update {
+        color: green;
+        cursor: pointer;
+      }
+
+      .delete {
+        color: red;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+      .sentenceCard{
+          width: 390px;
+          font-size: 20px;
+          
+          .sentenceCardItem{
+            
+          }
+      }
+  
+      .virtuoso{
+        width: 400px;
+      }
+    }
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .container {
+      .sentenceCard{
+          width: 700px;
+          font-size: 20px;
+          .sentenceCardItem{
+          }
+      }
+      .virtuoso{
+        width: 700px;
+      }
+    }
+  }
+  
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .container {
+    }
+  }
+  
+  @media only screen and (min-width: 1200px) {
+    .container {
+    }
+  }

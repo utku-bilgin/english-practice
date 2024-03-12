@@ -50,7 +50,7 @@ const WordList = () => {
   }
 
   const handleUpdateWord = (item: DictionaryItem) => {
-    navigate(`../wordUpdate/`, { state: { item } });
+    navigate(`../wordupdate/`, { state: { item } });
     setSearchResult("");
   }
 

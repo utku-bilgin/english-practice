@@ -185,13 +185,9 @@ export const DictionaryProvider = ({ children }: DictionaryProviderProps) => {
   const DeleteWord = async (data: number) => {
     const dataIndex = words.findIndex(word => word.id === data);
 
-    console.log(data)
-    console.log(dataIndex)
-    // if(dataIndex === -1)return
+    if(dataIndex === -1)return
 
-    const fetch = await axios.delete(`http://localhost:3002/words/${data}`);
-
-    console.log(fetch)
+    await axios.delete(`http://localhost:3002/words/${data}`);
 
     const deleteWord = [...words];
     deleteWord.splice(dataIndex, 1)

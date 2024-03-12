@@ -14,18 +14,30 @@ interface AddNewSentencePatternsItem {
   tr: string;
 }
 
+interface UpdateSentencePatternsItem {
+  id: number;
+  ing: string;
+  tr: string;
+}
+
 interface SentencePatternsContextType {
   sentences: SentencePatternsItem[];
+  SearchSentences: (search: string) => SentencePatternsItem[];
   SentencePatterns: (next: boolean) => SentencePatternsItem;
   sentencesCount: number;
   AddNewSentencePattern: (data: AddNewSentencePatternsItem) => Promise<void>;
+  UpdateSentence: (data: UpdateSentencePatternsItem) => Promise<void>;
+  DeleteSentence: (data: number) => Promise<void>;
 }
 
 const SentencePatternsContext = createContext<SentencePatternsContextType>({
   sentences: [],
+  SearchSentences: () => [],
   SentencePatterns: () => ({ id: 0, ing: "", tr: "", isLearning: false }),
   sentencesCount: 0,
   AddNewSentencePattern: async () => {},
+  UpdateSentence: async () => {},
+  DeleteSentence: async () => {},
 });
 
 interface SentencePatternsProviderProps {
@@ -56,6 +68,19 @@ export const SentencePatternsProvider = ({
     fetchSentences();
   }, []);
 
+  const SearchSentences = (search: string): SentencePatternsItem[] => {
+    if (search !== "") {
+      const filteredSentences = sentences.filter((sentence) => {
+        return sentence.ing.toLocaleLowerCase().includes(search.toLocaleLowerCase()) ||
+          sentence.tr.toLocaleLowerCase().includes(search.toLocaleLowerCase());
+      });
+      return filteredSentences;
+    } else {
+      return [];
+    }
+};
+
+
   const SentencePatterns = (next: boolean): SentencePatternsItem => {
     if (next) {
       const randomIndex: number = Math.floor(Math.random() * sentences.length);
@@ -75,7 +100,7 @@ export const SentencePatternsProvider = ({
         (sentence) => sentence.ing === data.ing && sentence.tr === data.tr
       )
     ) {
-      const lastWord: SentencePatternsItem  = sentences.splice(-1)[0];
+      const lastWord: SentencePatternsItem = sentences.splice(-1)[0];
       const Id: number = parseInt(lastWord.id.toString());
 
       const newData = {
@@ -97,11 +122,45 @@ export const SentencePatternsProvider = ({
     }
   };
 
+  const UpdateSentence = async (data: UpdateSentencePatternsItem) => {
+    const dataIndex = sentences.findIndex(sentence => sentence.id === data.id);
+    if(dataIndex === -1)return
+
+    const updateSentence = {
+      id: data.id,
+      ing: data.ing,
+      tr: data.tr,
+      isLearning: false,
+    }
+
+    await axios.put(`http://localhost:3002/sentences/${data.id}`, updateSentence);
+
+    setSentences(prevSentences => {
+      const updateSentences = [...prevSentences];
+      updateSentences[dataIndex] = updateSentence;
+      return updateSentences
+    })
+  }
+
+  const DeleteSentence = async (data: number) => {
+    const dataIndex = sentences.findIndex(sentence => sentence.id === data);
+
+    if(dataIndex === -1)return
+
+    await axios.delete(`http://localhost:3002/sentences/${data}`);
+
+    const deleteSentence = [...sentences]
+    deleteSentence.splice(dataIndex, 1)
+  }
+
   const value: SentencePatternsContextType = {
     sentences: sentences,
+    SearchSentences,
     SentencePatterns,
     sentencesCount,
     AddNewSentencePattern,
+    UpdateSentence,
+    DeleteSentence,
   };
 
   return (

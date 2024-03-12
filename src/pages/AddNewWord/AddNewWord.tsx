@@ -104,7 +104,7 @@ const AddNewWord = () => {
           </div>
         </div>
         <button className={style.formButton} type="submit">
-          Ekle
+          Add
         </button>
       </form>
     </div>

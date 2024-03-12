@@ -9682,6 +9682,102 @@
       "ing": "Lather up",
       "tr": "Köpürt",
       "isLearning": false
+    },
+    {
+      "id": 104,
+      "ing": "Is this car yours?",
+      "tr": "Bu araba sizin mi?",
+      "isLearning": false
+    },
+    {
+      "id": 105,
+      "ing": "No,it's not my car.Mine is over there",
+      "tr": "Hayır,o araba benim değil.Benimki orada",
+      "isLearning": false
+    },
+    {
+      "id": 106,
+      "ing": "Whose is it?",
+      "tr": "Kimin?",
+      "isLearning": false
+    },
+    {
+      "id": 107,
+      "ing": "This is the entrance to the garage",
+      "tr": "Burası garajın girişi",
+      "isLearning": false
+    },
+    {
+      "id": 108,
+      "ing": "This car can't be here",
+      "tr": "Araba burada olamaz",
+      "isLearning": false
+    },
+    {
+      "id": 109,
+      "ing": "It's blocking the driveway",
+      "tr": "Otoparkın giriş çıkışını engelliyor.",
+      "isLearning": false
+    },
+    {
+      "id": 110,
+      "ing": "Would you like to help me find the owner of the car?",
+      "tr": "Arabanın sahibini bulmama yardım etmek ister misin?",
+      "isLearning": false
+    },
+    {
+      "id": 111,
+      "ing": "There is a phone number on the windshield",
+      "tr": "Ön camda telefon numarası var.",
+      "isLearning": false
+    },
+    {
+      "id": 112,
+      "ing": "Otherwise,I can call the police and they can tow the car",
+      "tr": "Aksi takdirde polisi arayabilirim ve onlar arabayı çekebilir",
+      "isLearning": false
+    },
+    {
+      "id": 113,
+      "ing": "Look, a man is coming towards us",
+      "tr": "Bak,bir adam bize doğru geliyor.",
+      "isLearning": false
+    },
+    {
+      "id": 114,
+      "ing": "Are you aware?",
+      "tr": "Farkında mısın?",
+      "isLearning": false
+    },
+    {
+      "id": 115,
+      "ing": "Are you aware that you are illegally parked?",
+      "tr": "Hatalı park ettiğinizin farkında mısınız?",
+      "isLearning": false
+    },
+    {
+      "id": 116,
+      "ing": "You can't park your car in front of the driveway",
+      "tr": "Otoparkın önüne arabanı park edemezsin",
+      "isLearning": false
+    },
+    {
+      "id": 117,
+      "ing": "I can pull it away",
+      "tr": "Çekebilirim",
+      "isLearning": false
+    },
+    {
+      "id": 118,
+      "ing": "be careful next time",
+      "tr": "Bir dahaki sefere dikkatli ol",
+      "isLearning": false
+    },
+    {
+      "id": 119,
+      "ing": "The way I see life is changing",
+      "tr": "Hayata bakış açım değişiyor",
+      "isLearning": false
     }
   ]
 }

@@ -1,29 +1,39 @@
+import style from "./SentencePatternUpdate.module.scss";
 import { useState } from "react";
 import { useSentencePatternsContext } from "../../context/SentencePatternsContext";
-import style from "./AddNewSentencePatterns.module.scss";
 import { useNavigate } from "react-router";
+import { useLocation } from "react-router-dom";
 
-const AddNewSentencePatterns = () => {
+interface UpdateSentencePatternsItem {
+  id: number;
+  ing: string;
+  tr: string;
+}
+
+const SentencePatternUpdate = () => {
   const addNew = useSentencePatternsContext();
   const AddNewSentencePattern = addNew.AddNewSentencePattern;
   const navigate = useNavigate();
+  const location = useLocation();
 
-  const [ing, setIng] = useState<string>("");
-  const [tr, setTr] = useState<string>("");
+  const { item } = location.state as { item: UpdateSentencePatternsItem };
+
+  const [ing, setIng] = useState<string>(item.ing);
+  const [tr, setTr] = useState<string>(item.tr);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     if (ing && tr) {
-      const newWordData = {
+      const updateSentencedData = {
+        id: item.id,
         ing,
         tr,
       };
-      AddNewSentencePattern(newWordData);
+      AddNewSentencePattern(updateSentencedData);
       navigate("../");
     }
   };
-
   return (
     <div className={style.container}>
       <form className={style.form} onSubmit={handleSubmit}>
@@ -54,11 +64,11 @@ const AddNewSentencePatterns = () => {
           />
         </div>
         <button className={style.formButton} type="submit">
-          Add
+          Update
         </button>
       </form>
     </div>
   );
 };
 
-export default AddNewSentencePatterns;
+export default SentencePatternUpdate;
