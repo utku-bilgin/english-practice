@@ -55,7 +55,7 @@ const SentencePatternList = () => {
         data={sentences}
         itemContent={(index, item) => {
           return (
-            <div key={item.id}>
+            <div key={index}>
               <div className={style.sentenceCard}>
                 <div className={style.sentenceCardItem}>{item.ing}</div>
                 <div>{item.tr}</div>
