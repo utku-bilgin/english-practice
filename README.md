@@ -1,6 +1,6 @@
 
 🚀 React ve Typescript ile geliştirdiğim İngilizce egzersiz uygulaması 🎉 <br />
-🔗 Uygulamayı görmek ve denemek için [buraya tıklayabilirsiniz](https://lnkd.in/dtXuq6cu).<br />
+🔗 Uygulamayı görmek ve denemek için [buraya tıklayabilirsiniz](https://englishpracticeenglishpractice.netlify.app/).<br />
 📚 Bu uygulama, kullanıcıların sözlük, kelime ve cümle kalıbı egzersizleri yapmasına olanak tanırken aynı zamanda yeni kelimeler ve cümle yapıları ekleyebilme özgürlüğü sunuyor. <br />
 🔍 JSON sunucusu faydalanarak, projenin içindeki db.json dosyasından verileri sorunsuz bir şekilde API olarak entegre ettim, böylelikle veri alımını sorunsuz hale getirdim. İstekleri Axios mükemmel bir şekilde yönetti.<br />
 🔄 State management için ContextApi kullanarak verileri yönettim, bu da uygulamanın verimliliğini artırdı ve kod karmaşıklığını azalttı.<br />
