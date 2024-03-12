@@ -66,7 +66,7 @@ const WordList = () => {
         data={dictionary}
         itemContent={(index, item) => {
           return (
-            <div key={item.id}>
+            <div key={index}>
               {translationTypeResult === "EnglishToTurkish" ? (
                 <div className={style.wordCard}>
                   <div className={style.wordCardItem}>{item.ing}</div>
